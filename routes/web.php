@@ -12,5 +12,6 @@
 */
 
 Route::resource('/' , 'ShopsController');
+Route::resource('/shops' , 'ShopsController');
 Route::resource('preferedShops' , 'PreferedShopsController');
 Auth::routes();
