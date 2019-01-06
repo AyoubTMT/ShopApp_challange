@@ -14,8 +14,7 @@ class ShopsController extends Controller
      */
     public function index()
     {
-        $shops = Shop::orderby('id','asc')->paginate(9);
-        //return view('dashbord',['hello'=>$hello]);        
+        $shops = Shop::orderby('id','asc')->paginate(9);  
         return view('pages.shops')->with('shops',$shops);
     }
 
