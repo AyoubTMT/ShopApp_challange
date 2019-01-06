@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::resource('shops' , 'ShopsController');
+Route::resource('/' , 'ShopsController');
 Route::resource('preferedShops' , 'PreferedShopsController');
 Auth::routes();
-
