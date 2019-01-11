@@ -16,7 +16,7 @@
             @foreach ($shops as $shop)
                 <div class="col">
                     <div class="card  text-center" id="shop" style="width: 18rem;">
-                        <div class="card-header">{{$shop->shopname}}</div>
+                        <div class="card-header">{{$shop->shopname}} - {{$shop->location}}m</div>
                         <div class="card-body">
                             <img src="{{ asset('storage/01.png') }}" class="card-img-top" alt="...">
                             @if (!Auth::guest())
