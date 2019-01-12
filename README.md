@@ -108,7 +108,7 @@ The coding challenge is about implementing an app that lists shops nearby.
 
 ### Mockups
 
-![Main Page - 'shop.blade.php' - List of shops neaby my location sorted by distance](https://d2mxuefqeaa7sj.cloudfront.net/s_42947E7C35A750A25D07D7432619573EA3862052B5357BE997A071FD6789712E_1510745488079_Assignment+-+FullStack+Web.png)
+![Main Page - 'shop.blade.php' - List of shops neaby my location sorted by distance](/storage/app/public/01.png)
 
 ![My Preferred Shop page - 'preferedShops.blade.php' - List of already preferred shops](https://d2mxuefqeaa7sj.cloudfront.net/s_42947E7C35A750A25D07D7432619573EA3862052B5357BE997A071FD6789712E_1510745502935_Assignment+-+FullStack+Web+copy.png)
 
