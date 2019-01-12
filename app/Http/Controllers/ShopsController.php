@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use App\Shop;
 use Illuminate\Http\Request;
 
@@ -14,7 +14,21 @@ class ShopsController extends Controller
      */
     public function index()
     {
-        $shops = Shop::orderby('location','asc')->paginate(9);  
+        if (auth()->guest()) {
+            $shops = Shop::orderby('location','asc')->paginate(9); 
+        } else {
+            // if it's a user, we should get shops that are not liked yet
+            // this request will return an array with key-value but just want the value
+            $preferedShops = DB::table('preferedshops')->select('shop_id')->where('user_id',auth()->user()->id)->get()->toArray();
+            // so we put 'shop_id' values of table 'preferedshops' in an array 
+            $myArray = [];
+            foreach ($preferedShops as $preferedShop) {
+                array_push($myArray, $preferedShop->shop_id);
+            }
+            // request of shops that are not like yet
+            $shops = Shop::whereNotIn('id', $myArray)->orderby('location','asc')->paginate(9);
+        }
+
         return view('pages.shops')->with('shops',$shops);
     }
 
