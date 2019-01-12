@@ -29,6 +29,10 @@ Generate a new application key
 
     php artisan key:generate
 
+Create a symbolic link from public/storage to  storage/app/public
+
+    php artisan storage:link
+
 Run the database migrations (**Create a database in your server and set the database connection in .env before migrating**)
 
     php artisan migrate
@@ -46,6 +50,7 @@ You can now access the server at http://localhost:8000
     composer install
     cp .env.example .env
     php artisan key:generate
+    php artisan storage:link
     
 **Make sure you set the correct database connection information before running the migrations** [Environment variables](#environment-variables)
 
