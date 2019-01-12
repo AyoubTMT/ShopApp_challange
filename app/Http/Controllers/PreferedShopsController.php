@@ -18,7 +18,11 @@ class PreferedShopsController extends Controller
         if (auth()->guest()) {
             return redirect('/login')->with('error','Unauthorized page !!!');
         } else {
-            $preferedShops = PreferedShop::where('user_id',auth()->user()->id)->paginate(9);
+            // select the current user's prefered shops
+            $preferedShops = PreferedShop::join('shops', 'shops.id', '=', 'preferedshops.shop_id')
+                ->where('preferedshops.user_id',auth()->user()->id)
+                ->select('shops.shopname', 'preferedshops.id')
+                ->paginate(9);
             return view('pages.preferedShops')->with('preferedShops', $preferedShops);
         }        
     }
