@@ -18,7 +18,7 @@ class ShopsTableSeeder extends Seeder
             ),
             array(
                 'shopname' => 'book shop',
-                'location' => 'book shop',
+                'location' => '30',
             ),
             array(
                 'shopname' => 'cake shop',
