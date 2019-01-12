@@ -39,7 +39,7 @@ class ShopsController extends Controller
      */
     public function create()
     {
-        //
+        return redirect('/');
     }
 
     /**
@@ -50,7 +50,7 @@ class ShopsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return redirect('/');
     }
 
     /**
@@ -61,7 +61,7 @@ class ShopsController extends Controller
      */
     public function show(Shop $shop)
     {
-        //
+        return redirect('/');
     }
 
     /**
@@ -72,7 +72,7 @@ class ShopsController extends Controller
      */
     public function edit(Shop $shop)
     {
-        //
+        return redirect('/');
     }
 
     /**
@@ -84,7 +84,7 @@ class ShopsController extends Controller
      */
     public function update(Request $request, Shop $shop)
     {
-        //
+        return redirect('/');
     }
 
     /**
@@ -95,6 +95,6 @@ class ShopsController extends Controller
      */
     public function destroy(Shop $shop)
     {
-        //
+        return redirect('/');
     }
 }
