@@ -93,7 +93,7 @@ Run the database seeder and you're done
 
 
 ### Functional spec
----------------
+
 The coding challenge is about implementing an app that lists shops nearby. 
 
 - As a User, I can sign up using my email & password
@@ -107,7 +107,6 @@ The coding challenge is about implementing an app that lists shops nearby.
 - [BONUS] As a User, I can remove a shop from my preferred shops list
 
 ### Mockups
----------------
 
 ![Main Page - 'shop.blade.php' - List of shops neaby my location sorted by distance](https://d2mxuefqeaa7sj.cloudfront.net/s_42947E7C35A750A25D07D7432619573EA3862052B5357BE997A071FD6789712E_1510745488079_Assignment+-+FullStack+Web.png)
 
